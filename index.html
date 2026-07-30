@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moja filmoteka</title>
+  <meta name="description" content="Lična kolekcija filmova sa ocenjivanjem i statistikom." />
+
+  <!-- Tipografija: Fraunces (naslovi), DM Sans (tekst), DM Mono (brojevi/oznake) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="wrap" role="main">
+
+    <!-- ===================== ZAGLAVLJE ===================== -->
+    <header class="head">
+      <p class="eyebrow">Lična kolekcija</p>
+      <h1 class="title">Moja filmoteka</h1>
+      <p class="lede">Pregledaj katalog, filtriraj po žanru i oceni filmove koje si gledao.</p>
+    </header>
+
+    <!-- ===================== DASHBOARD (Sprint 2: statistika) ===================== -->
+    <section class="dash" aria-label="Statistika kolekcije">
+      <div class="stat stat--avg">
+        <span class="stat-label">Prosečna ocena</span>
+        <div class="stat-avg">
+          <span class="stat-avg-num" id="stat-avg">—</span>
+          <span class="stat-avg-stars" id="stat-avg-stars" aria-hidden="true"></span>
+        </div>
+        <span class="stat-sub" id="stat-rated">Ocenjeno: 0 / 0</span>
+      </div>
+
+      <div class="stat stat--genres">
+        <span class="stat-label">Broj filmova po žanru</span>
+        <div class="bars" id="genre-bars"><!-- trakice se generišu --></div>
+      </div>
+    </section>
+
+    <!-- ===================== FILTER (Sprint 1: filter po žanru) ===================== -->
+    <nav class="filters" id="filters" aria-label="Filter po žanru">
+      <!-- čipovi se generišu dinamički -->
+    </nav>
+
+    <!-- ===================== KATALOG (Sprint 1: prikaz kataloga) ===================== -->
+    <section class="grid" id="grid" aria-label="Katalog filmova">
+      <!-- kartice filmova se generišu dinamički -->
+    </section>
+
+    <p class="empty" id="empty" hidden>Nema filmova u ovom žanru.</p>
+
+    <footer class="foot">
+      <span>Diplomski demo • Azure Static Web Apps</span>
+    </footer>
+  </main>
+
+  <!-- Prvo podaci, pa logika -->
+  <script src="films.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
